@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Hema's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="5apex.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Hema</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="5index.html">Home</a></li>
+        <li><a href="5about.html">About</a></li>
+        <li><a href="5contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <section class="content contact" style="max-width: 1000px; margin: auto;">
+    <h1>Contact Me</h1>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Hema Latha | Portfolio Project - ApexPlanet Internship</p>
+  </footer>
+
+  <script src="5apex.js"></script>
+</body>
+</html>

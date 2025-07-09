@@ -1,0 +1,230 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #fdfcfd, #f0f2f0);
+  color: #2d3436;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffeaa7;
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  color: #222;
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 1.2s ease;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 140px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-text h1 {
+  font-size: 52px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 22px;
+  margin-bottom: 35px;
+  font-weight: 500;
+}
+
+.btn {
+  background: #ff6ec4;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(255, 110, 196, 0.3);
+}
+
+.btn:hover {
+  background: #f368e0;
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(255, 110, 196, 0.4);
+}
+
+/* Content Section */
+.content {
+  padding: 50px 20px;
+  max-width: 850px;
+  margin: auto;
+  animation: fadeInUp 0.9s ease;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  flex: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Form */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #ff6ec4;
+  box-shadow: 0 0 10px rgba(255, 110, 196, 0.2);
+  outline: none;
+}
+
+.contact button {
+  background: linear-gradient(to right, #ff6ec4, #7873f5);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contact button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(to right, #f368e0, #6c5ce7);
+}
+
+/* Footer */
+footer {
+  background: #2d3436;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  animation: fadeIn 1s ease;
+  margin-top: auto;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #4b6cb7;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
+
